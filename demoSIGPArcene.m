@@ -14,6 +14,6 @@ feaTest = fea(101:end,:);
 
 disp("Classifying with SIGP ...");
 hyp = sigp(feaTrain,gndTrain,1,'covkfn', 'sigp_rbf',...
-    'covkpar',362.46,'lambda',1.1863e-05);
+    'covkpar',340.1,'ykpar',0.98738,'eta',7.5899e-07);
 
 disp("F1 score:" + num2str(F1score(sign(hyp.f(feaTest)),gndTest)));

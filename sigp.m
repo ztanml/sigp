@@ -44,10 +44,10 @@ opt.addParameter( 'tol',       1e-8,      @(x) floor(x) >= 0);
 opt.addParameter( 'order',     [],        @(x) isempty(x) | length(x)==n);
 opt.addParameter( 'sdr',       'ker',     @(x) strcmp(x,'slicing')|strcmp(x,'ker'));
 opt.addParameter( 'ns',        0,         @(x) floor(x) > 1 & floor(x) <= n/2); % 0 for auto select
-opt.addParameter( 'eta',       1e-10,     @(x) floor(x) >= 0);
+opt.addParameter( 'eta',       1e-4,      @(x) floor(x) >= 0);
 opt.addParameter( 'eta1',      1e-4,      @(x) floor(x) >= 0);
 opt.addParameter( 'ykfn',      @sigp_rbf, @(x) feval(x) >= 0);
-opt.addParameter( 'ykpar',     std(y)/2,  @(x) true);
+opt.addParameter( 'ykpar',     std(y),    @(x) true);
 opt.addParameter( 'lambda',    0,         @(x) floor(x) >= 0);
 opt.addParameter( 'covkfn',    @sigp_rbf, @(x) feval(x) >= 0);
 opt.addParameter( 'covkpar',   1,         @(x) true);

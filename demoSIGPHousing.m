@@ -10,6 +10,7 @@ feaTest = fea(401:end,:);
 gndTest = gnd(401:end);
 
 disp('Training SIGP ...');
-hyp = sigp(feaTrain,gndTrain,2,'covkfn','sigp_rbf','covkpar',503.47);
+hyp = sigp(feaTrain,gndTrain,2,'covkfn','sigp_rbf','covkpar',71.18,...
+    'ykpar',1.0015,'eta',1.1378e-08);
 
 disp('Mean squared error:' + string(norm(hyp.f(feaTest) - gndTest)^2/length(gndTest)));
