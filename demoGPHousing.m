@@ -21,3 +21,5 @@ likfunc = @likGauss; hyp.lik = log(1);
 % covfuncF = {@apxSparse,{covfunc},feaTrain(randperm(n,400),:)};
 hyp = minimize(hyp, @gp, -1000, @infExact, meanfunc, covfunc, likfunc, feaTrain, gndTrain);
 [ymu,ys2] = gp(hyp, @infExact, meanfunc, covfunc, likfunc, feaTrain, gndTrain, feaTest);
+
+disp('Mean squared error:' + string(norm(ymu - gndTest)^2/length(gndTest)));
