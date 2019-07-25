@@ -1,11 +1,6 @@
 # Finite-Sample Integral Gaussian Processes (SIGP)
-A dual construction of Gaussian processes with sample paths in a given reproducing kernel Hilbert space.
-Matlab code for the paper: https://arxiv.org/abs/1802.07528
-
-## Comparison of SIGP and the standard Gaussian process (GP)
-  * SIGP can realize more functions than GP for the same covariance kernel
-  * SIGP admits faster inference
-  * SIGP is robust against overfitting
+   * A dual construction of Gaussian processes with sample paths in a given reproducing kernel Hilbert space.
+   * Matlab code for the paper: https://arxiv.org/abs/1802.07528
 
 ## SIGP on Real-Life Data
 ### Example 1: Classification of the Arcene cancer data
